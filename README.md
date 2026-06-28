@@ -48,3 +48,19 @@ This repo documents the vehicle architecture, component selection, power system,
 - Designed and documented a UAV hardware/software integration project involving flight controller, ESCs, motors, GPS, telemetry radios, LiDAR/range sensors, high-current batteries, power distribution, and field-test planning.
 - Created system documentation including wiring layout, power architecture, component selection, safety checklist, and integration-test plan.
 - Planned telemetry and perception integration workflows for field testing, diagnostics, and future autonomous behavior.
+
+## Sprint 1 portfolio polish
+
+This repository is paired with the UAV Telemetry Ground Station project. Together they demonstrate both sides of UAV/robotics systems integration:
+
+- physical system design and bring-up documentation
+- telemetry monitoring and post-test software tooling
+
+Useful docs:
+
+- [System architecture](docs/architecture.md)
+- [Bench test plan](docs/bench-test-plan.md)
+- [Risk register](docs/risk-register.md)
+- [Interview walkthrough](docs/interview-walkthrough.md)
+- [Resume bullets](docs/resume-bullets.md)
+- [GitHub polish checklist](docs/github-polish-checklist.md)
