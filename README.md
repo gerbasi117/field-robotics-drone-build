@@ -1,36 +1,39 @@
 # Field Robotics Drone Build
 
-A UAV hardware/software integration project documenting a custom drone platform for telemetry, sensing, field testing, and future autonomy work.
+UAV hardware/software integration documentation for a custom multirotor platform built as a field-robotics portfolio project.
 
-## Purpose
+This repo documents the vehicle architecture, component selection, power system, wiring plan, telemetry plan, pre-flight safety process, and integration-test workflow for a custom UAV platform. The goal is to demonstrate practical UAV/robotics systems integration skills: flight controller setup, ESC/motor wiring, battery/power planning, telemetry, sensors, safety checks, and field-test planning.
 
-This repo documents the real-world integration work behind a UAV/field robotics platform: flight controller, ESCs, motors, GPS, telemetry, sensors, power distribution, battery safety, wiring, and test planning.
+## Target roles this project supports
 
-## Target job relevance
-
-This project supports roles such as:
-
-- UAV Systems Integration Engineer
-- Robotics Systems Integration Engineer
+- Systems Integration Engineer - UAV/Robotics
+- UAV Integration Engineer
+- Robotics Integration Engineer
 - Field Robotics Engineer
-- UAV Test Engineer
 - Robotics Test Engineer
 - Mission Operations Engineer
-- Technical Operations Engineer — Robotics
+- Technical Operations Engineer - Robotics
 
-## System overview
+## Current status
 
-The UAV platform is designed around:
+- Hardware selected and being assembled
+- Wiring/power architecture planned
+- Telemetry and sensor integration planned
+- Photos and field-test notes will be added as build progresses
 
-- Flight controller and GPS
-- ESCs and motors
-- High-current battery/power system
-- Telemetry radio link
-- Range sensors / LiDAR planning
-- Ground station and flight-log workflow
-- Safety checklist and staged integration test plan
+## Main subsystems
 
-## Docs
+- Flight controller: ModalAI Flight Core V2
+- ESC: Holybro Tekko32 F4 Metal 4-in-1 65A, 6S
+- Motors: EMAX ECO II 2207 1700KV x4
+- Props: HQProp DP 7x3.5x3 tri-blade
+- Batteries: 2x CNHL 9500mAh 6S packs in parallel
+- GPS: ModalAI u-blox M10
+- Telemetry: 915MHz telemetry pair
+- Sensors: RP-Lidar S2, TFmini Plus rangefinders, FLIR Lepton/PureThermal 3
+- Camera: GoPro Hero 13 for recording; FPV system planned for live feed
+
+## Documentation
 
 - [System Overview](docs/system-overview.md)
 - [Parts List](docs/parts-list.md)
@@ -40,20 +43,8 @@ The UAV platform is designed around:
 - [Safety Checklist](docs/safety-checklist.md)
 - [Integration Test Plan](docs/integration-test-plan.md)
 
-## Current status
-
-- [ ] Parts list verified
-- [ ] Wiring photos added
-- [ ] Power architecture documented
-- [ ] Flight controller configuration documented
-- [ ] Telemetry plan documented
-- [ ] Pre-flight safety checklist created
-- [ ] First bench test documented
-- [ ] First tethered test documented
-- [ ] First hover test documented
-
 ## Resume bullets
 
 - Designed and documented a UAV hardware/software integration project involving flight controller, ESCs, motors, GPS, telemetry radios, LiDAR/range sensors, high-current batteries, power distribution, and field-test planning.
-- Created system documentation including component selection, wiring layout, power architecture, safety checklist, and staged integration test plan.
-- Planned telemetry and perception workflows for diagnostics, field testing, and future autonomous behavior.
+- Created system documentation including wiring layout, power architecture, component selection, safety checklist, and integration-test plan.
+- Planned telemetry and perception integration workflows for field testing, diagnostics, and future autonomous behavior.

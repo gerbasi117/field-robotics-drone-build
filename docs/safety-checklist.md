@@ -2,35 +2,33 @@
 
 ## Bench testing
 
-- [ ] Props removed
-- [ ] Battery voltage checked
-- [ ] Polarity checked
-- [ ] Connectors seated
-- [ ] ESC capacitor installed
-- [ ] Flight controller securely mounted
-- [ ] GPS/compass away from high-current wires where possible
-- [ ] Telemetry link verified
-- [ ] RC failsafe verified
-- [ ] Emergency disconnect plan ready
+- [ ] Remove propellers before any bench power-up.
+- [ ] Verify both batteries are at similar voltage before parallel connection.
+- [ ] Inspect all solder joints and high-current connectors.
+- [ ] Confirm polarity before plugging in power module, ESC, sensors, and flight controller.
+- [ ] Confirm flight controller receives stable voltage.
+- [ ] Confirm ESC signal cable orientation.
+- [ ] Confirm GPS, telemetry, and receiver wiring before applying power.
+- [ ] Keep LiPo-safe storage/charging practices.
 
 ## Pre-flight
 
-- [ ] Frame inspected
-- [ ] Props correct direction and secured
-- [ ] Motors spin correct direction
-- [ ] GPS lock verified
-- [ ] Battery secured
-- [ ] Center of gravity checked
-- [ ] Telemetry logging active
-- [ ] Takeoff/landing area clear
-- [ ] Failsafe behavior verified
-- [ ] Weather/wind acceptable
+- [ ] Frame, arms, and motor mounts inspected.
+- [ ] Props installed in correct orientation only after bench tests.
+- [ ] Batteries secured and balanced.
+- [ ] GPS lock confirmed.
+- [ ] Telemetry link confirmed.
+- [ ] Receiver/control link confirmed.
+- [ ] Failsafe behavior reviewed.
+- [ ] Flight mode verified.
+- [ ] Rangefinder/sensor readings reasonable.
+- [ ] Area clear of people, animals, vehicles, and obstacles.
 
 ## Post-flight
 
-- [ ] Battery temperature checked
-- [ ] Motor/ESC temperature checked
-- [ ] Connector heat checked
-- [ ] Logs saved
-- [ ] Issues documented
-- [ ] Next test plan updated
+- [ ] Disarm vehicle.
+- [ ] Disconnect batteries.
+- [ ] Inspect motors, ESC, wiring, and battery temperature.
+- [ ] Save telemetry logs.
+- [ ] Record anomalies and warnings.
+- [ ] Update test notes and next actions.

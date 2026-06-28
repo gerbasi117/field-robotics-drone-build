@@ -1,48 +1,64 @@
 # Integration Test Plan
 
-## Stage 1 — Documentation and inspection
+## Goal
 
-- Confirm parts list.
-- Photograph layout.
-- Confirm wiring path.
-- Confirm power architecture.
+Safely bring up the UAV one subsystem at a time and document results. This test plan is designed to reduce risk and create a repeatable workflow for hardware/software integration.
 
-## Stage 2 — Power-on bench test
+## Phase 1: Static hardware inspection
+
+- Verify frame integrity.
+- Verify battery bay and mounting hardware.
+- Verify motor mounting and screw lengths.
+- Verify ESC placement and airflow.
+- Verify wiring strain relief.
+- Verify connector orientation and polarity.
+
+## Phase 2: Power-system bench test
+
+- Remove all propellers.
+- Connect one battery path at a time if possible.
+- Confirm no unexpected heat, smoke, arcing, or voltage drop.
+- Confirm flight-controller power is stable.
+- Confirm voltage/current values are reasonable.
+
+## Phase 3: Flight controller bring-up
+
+- Connect to ground-control/configuration software.
+- Verify board orientation.
+- Verify sensor calibration.
+- Verify GPS detection.
+- Verify receiver input.
+- Verify telemetry radio connection.
+- Verify arming checks and failsafe settings.
+
+## Phase 4: Motor/ESC validation
 
 - Props removed.
-- Power electronics using current-limited/safe procedure if available.
-- Confirm flight controller boots.
-- Confirm receiver/GPS/telemetry detected.
+- Verify motor order.
+- Verify motor direction.
+- Verify ESC response.
+- Verify no abnormal vibration/noise.
+- Verify current draw remains reasonable during low-throttle tests.
 
-## Stage 3 — Motor test
+## Phase 5: Telemetry validation
 
-- Props removed.
-- Confirm motor order.
-- Confirm motor direction.
-- Check ESC temperature and connector heat.
+- Confirm telemetry stream is received.
+- Confirm GPS, altitude, battery, current, mode, armed state, and rangefinder fields.
+- Save a sample telemetry log.
+- Replay sample log through the `uav-telemetry-ground-station` project.
 
-## Stage 4 — Sensor test
+## Phase 6: Controlled field testing
 
-- Confirm GPS lock.
-- Confirm rangefinder data.
-- Confirm telemetry messages.
-- Save sample log.
-
-## Stage 5 — Tethered / restrained test
-
-- Verify thrust response at low power.
-- Monitor current draw and voltage sag.
-- Stop at any abnormal vibration, heat, or telemetry fault.
-
-## Stage 6 — First hover
-
-- Short low-altitude hover.
+- Short low-altitude hover test.
+- Confirm stability and control response.
 - Log telemetry.
-- Inspect hardware after landing.
-- Review voltage/current/GPS/IMU logs.
+- Review warnings/anomalies.
+- Make one change at a time between test flights.
 
-## Issues log
+## Exit criteria for first successful integration pass
 
-| Date | Test | Issue | Suspected Cause | Fix | Retest Result |
-|---|---|---|---|---|---|
-| TODO | TODO | TODO | TODO | TODO | TODO |
+- Vehicle powers on safely.
+- Flight controller, GPS, receiver, and telemetry are detected.
+- Motor order/direction verified with props removed.
+- Telemetry logs can be recorded and reviewed.
+- Safety checklist is complete before first flight.
